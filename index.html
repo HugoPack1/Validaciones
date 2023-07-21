@@ -31,7 +31,7 @@
         <label for="time_control">Tiempo:</label> <input type="time" name="time_control" /> <!--Validar el tiempo en formato de hora-->
         <br />
         <label for="datetime_control">Fecha y hora de nacimiento:</label>
-        <input type="datetime" name="datetime_control" /> <!--Validar fecha y hora de nacimiento-->
+        <input type="datetime" name="datetime_control" placeholder="dd/mm/aaaa hh:mm" /> <!--Validar fecha y hora de nacimiento-->
         <br />
         <label for="month_control">Mes:</label> <input type="month" name="month_control" /> <!--Validar mes-->
         <br />
@@ -63,5 +63,7 @@
       </form>
       <button onclick="mirarFecha()">Botón</button>
       <button onclick="mirarHora()">Botón hora</button>
+      <button onclick="mirarNacimiento()">Botón Nac</button>
+      <button onclick="mirarMes()">Botón Mes</button>
   </body>
 </html>

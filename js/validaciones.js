@@ -137,7 +137,57 @@ function mirarHora() {
 
 6 //Validar fecha y hora de nacimiento
 
+function validarNacimiento(vida) {
+    const nacer = vida.trim()
+    const pattern = /^([0][1-9]|[12][0-9]|3[01])(\/|-)([0][1-9]|[1][0-2])\2(\d{4})(\s)([0-1][1-9]|[2][0-3])(:)([0-5][0-9])$/;
+    //console.log("sin limpiar: ", correo, "y limpio: ", nacer)
+    if (typeof nacer !== 'string' || nacer === "" || !pattern.test(nacer) ){
+        //console.log("entro en el if")
+        
+        return false
+    } else {
+        return true
+    }
+}
+
+console.log(validarNacimiento("23/12/2000 14:55"))
+console.log(validarNacimiento("2/13/2000 14:55"))
+console.log(validarNacimiento("48/12/2000 14:55"))
+console.log(validarNacimiento("23-12-2000 14:55"))
+console.log(validarNacimiento("23/12/2000 14/55"))
+console.log(validarNacimiento("23/12/2000 14:65"))
+console.log(validarNacimiento("23/12/2000 56:55"))
+console.log(validarNacimiento("dbhugfihaeiq"))
+
+
+function mirarNacimiento() {
+    console.log(document.querySelector("[type=datetime]").value);
+}
+
+
 7 //Validar mes
+
+function validarMes(mes) {
+    const month = mes.trim()
+    const pattern = /^([0-9]{4,})([-])([0-9]{2,})$/;
+    //console.log("sin limpiar: ", correo, "y limpio: ", month)
+    if (typeof month !== 'string' || month === "" || !pattern.test(month) ){
+        //console.log("entro en el if")
+        
+        return false
+    } else {
+        return true
+    }
+}
+
+console.log(validarMes("2000/12"))
+console.log(validarMes("2000-12"))
+console.log(validarMes("2000-23"))
+console.log(validarMes("23-2000"))
+
+function mirarMes() {
+    console.log(document.querySelector("[type=month]").value);
+}
 
 8 //Validar semana
 
